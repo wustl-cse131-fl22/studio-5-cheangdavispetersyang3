@@ -69,7 +69,15 @@ public class Methods {
 	public static String substituteAll(String source, char target, String replacement) {
 		String result = "";
 		// TODO: Finish this method
-		
+		int endI = source.length(); //parameter for the for loop
+		for (int i = 0; i < endI; i++) {
+			if (source.charAt(i) == target) {
+				result = result + replacement;
+			} // replace with what we want to replace
+			else {
+				result = result + source.charAt(i);
+			} // add the rest of the source string
+		}// end of string for
 		return result;
 	}
 
